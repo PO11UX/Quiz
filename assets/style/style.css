@@ -107,8 +107,8 @@ body {
   .app {
     width: 300px;
   }
-  .btn {
-    font-size: 5px;
+  .app .btn {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
