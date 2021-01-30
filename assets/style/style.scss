@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../image/question-mark-background-vector.jpg');
+    background-size: cover;
+    background-position:  center;
+}
+.app{
+    width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
+    padding: 15px;
+    .button-grid{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap:10px;
+        margin: 20px 0;
+    }
+    .btn{
+        border-radius: 10px;
+        background-color: rgb(166, 70, 255);
+        color: black;
+        outline: none;
+        font-size: 25px;
+        
+    }  
+    .btn:hover{
+        background-color: rgb(148, 0, 185);
+    }
+    .submit{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .start,.next{
+            
+            padding: 10px 20px;
+        }
+    }
+    .cont{
+        display: none;
+    }
+    .question{
+        font-family: "Comic Sans MS", cursive, sans-serif;;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .Score{
+        
+        font-family: "Comic Sans MS", cursive, sans-serif;;
+        font-size: 50px;
+        font-weight: 100;
+        margin: 10px 0px;
+        text-shadow: .4px 2px rgba(0,0,0,0.6);
+    }
+    .correct{
+        background-color: green;
+    }
+    .wrong{
+        background-color: red;
+    }
+}
+@media screen and (max-width:1200px){
+    .app{
+        width: 600px;
+    }
+}
+@media screen and (max-width:800px){
+    .app{
+        width: 300px;
+    }
+    .btn{
+        font-size: 5px;
+    }
+}

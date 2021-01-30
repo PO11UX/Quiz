@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../image/question-mark-background-vector.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.app {
+  width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
+  padding: 15px;
+}
+
+.app .button-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.app .btn {
+  border-radius: 10px;
+  background-color: #a646ff;
+  color: black;
+  outline: none;
+  font-size: 25px;
+}
+
+.app .btn:hover {
+  background-color: #9400b9;
+}
+
+.app .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .submit .start, .app .submit .next {
+  padding: 10px 20px;
+}
+
+.app .cont {
+  display: none;
+}
+
+.app .question {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.app .Score {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  margin: 10px 0px;
+  text-shadow: 0.4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.app .correct {
+  background-color: green;
+}
+
+.app .wrong {
+  background-color: red;
+}
+
+@media screen and (max-width: 1200px) {
+  .app {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    width: 300px;
+  }
+  .btn {
+    font-size: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
