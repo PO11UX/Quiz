@@ -67,7 +67,7 @@ function select(x){
     })
     if(shuffle.length > current +1){
         next.classList.remove('cont')
-        score.innerText=''+Score;
+        score.innerText='';
         
     }
     else{
