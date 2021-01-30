@@ -48,10 +48,11 @@ body {
   color: black;
   outline: none;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .app .btn:hover {
-  background-color: #9400b9;
+  border-color: black;
 }
 
 .app .submit {

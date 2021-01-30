@@ -4,9 +4,10 @@ const quizCont = document.getElementById('questions-cont');
 const submit  = document.getElementById('answer-but');
 const questionElement = document.getElementById('questions');
 const score = document.getElementById('score');
-
+var disable=false;
 let shuffle,current
 var Score =0;
+
 var op =false;
 start.addEventListener('click' ,startQuiz);
 next.addEventListener('click',()=>{
@@ -15,7 +16,6 @@ next.addEventListener('click',()=>{
     nextQuestion();
 })
 function startQuiz(){
-    
     start.classList.add('cont');
     shuffle = questions.sort(() => Math.random() - .5);
     current = 0;
@@ -35,6 +35,7 @@ function showQuestion(question){
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
+        button.classList.add('hover');
         if(answer.correct){
             button.dataset.correct=answer.correct;
             
@@ -59,6 +60,7 @@ function select(x){
     if(correct && !op ){
         Score ++;
         op=true;
+        button.classList.remove('hover');
     }
     
     Array.from(submit.children).forEach(button=>{
@@ -67,7 +69,9 @@ function select(x){
     })
     if(shuffle.length > current +1){
         next.classList.remove('cont')
-        score.innerText='';
+        score.innerText='Score:'+Score;
+        
+        
         
     }
     else{
@@ -77,16 +81,20 @@ function select(x){
         Score=0;
         
     }
+    
 }
 function setStatusClass(element, correct){
     clearStatusClass(element);
  
     if(correct){
         element.classList.add('correct');
-        
+        disable=true;
     }else{
         element.classList.add('wrong');
+        disable=true;
+        
     }
+    
    
 }
 function clearStatusClass(element){

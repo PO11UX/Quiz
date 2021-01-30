@@ -33,10 +33,11 @@ body{
         color: black;
         outline: none;
         font-size: 25px;
+        cursor: pointer;
         
     }  
     .btn:hover{
-        background-color: rgb(148, 0, 185);
+        border-color: rgb(0, 0, 0);
     }
     .submit{
         display:flex;
